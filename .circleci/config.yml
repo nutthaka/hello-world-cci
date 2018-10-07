@@ -1,10 +1,18 @@
 version: 2
 jobs:
-  build:
+  build1:
     docker: # use the docker executor type; machine and macos executors are also supported
       - image: circleci/node:6 # the primary container, where your job's commands are run
     steps:
       - checkout # check out the code in the project directory
       - run: 
-          name: Echo
+          name: Echo 1
+          command: echo "hello world"
+  build2:
+    docker: # use the docker executor type; machine and macos executors are also supported
+      - image: circleci/node:6 # the primary container, where your job's commands are run
+    steps:
+      - checkout # check out the code in the project directory
+      - run: 
+          name: Echo 2
           command: echo "hello world"
