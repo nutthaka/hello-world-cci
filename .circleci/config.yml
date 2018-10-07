@@ -18,9 +18,12 @@ jobs:
           command: echo "hello world"
 workflows:
   version: 2
-  workflow:
+  workflow-master:
     jobs:
       - build1
       - build2:
           requires:
              - build1
+  workflow-branch:
+    jobs:
+      - build1      
