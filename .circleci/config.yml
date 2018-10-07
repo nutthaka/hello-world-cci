@@ -21,6 +21,6 @@ workflows:
   workflow:
     jobs:
       - build1
-      - build2
-        requires:
-          - build1
+      - build2:
+          requires:
+             - build1
