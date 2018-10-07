@@ -20,7 +20,11 @@ workflows:
   version: 2
   workflow-master:
     jobs:
-      - build1
+      - build1:
+          filters:
+              branches:
+                only:
+                  - master
       - build2:
           requires:
              - build1
@@ -30,4 +34,4 @@ workflows:
           filters:
             branches:
               only:
-                - branch*
+                - branch
