@@ -20,13 +20,17 @@ workflows:
   version: 2
   workflow-master:
     jobs:
-      - build1
+      - build1:
+          filters:
+              branches:
+                only:
+                  - master
       - build2:
           requires:
              - build1
   workflow-branch:
     jobs:
-      - build1   
+      - build1: 
           filters:
             branches:
               only:
