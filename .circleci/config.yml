@@ -16,3 +16,9 @@ jobs:
       - run: 
           name: Echo 2
           command: echo "hello world"
+workflows:
+  version: 2
+  workflow:
+    jobs:
+    - build1
+    - build2
