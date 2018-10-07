@@ -26,8 +26,8 @@ workflows:
              - build1
   workflow-branch:
     jobs:
-      - build1   
+      - build1: 
           filters:
             branches:
               only:
-                - branch
+                - branch*
